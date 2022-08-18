@@ -1,7 +1,10 @@
+import type { NextPage } from 'next'
 import React from 'react'
 
-const Home = () => {
-  return <h1>Hello World</h1>
+import { HomeView } from 'views/home'
+
+const Home: NextPage = () => {
+  return <HomeView />
 }
 
 export default Home
