@@ -18,6 +18,7 @@ export default {
     shape: '#fff',
     blue: '#3B74F2',
     grey400: '#A5A5A5',
+    grey300: '#CCD2DF',
     grey200: '#DCDCDC',
     green400: '#257a00',
     green200: '#c7ffa6'
