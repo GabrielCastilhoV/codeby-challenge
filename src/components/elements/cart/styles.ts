@@ -14,7 +14,7 @@ export const Header = styled.header`
   font-weight: ${({ theme }) => theme.font.weights.bold};
   text-align: center;
 
-  padding: 24px 20px 20px;
+  padding: 15px;
 
   border-bottom: 1px solid ${({ theme }) => theme.colors.grey400};
 `
@@ -28,11 +28,6 @@ export const Content = styled.div`
 `
 
 export const Summary = styled.div`
-  /* display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: column; */
-
   padding: 36px 20px;
   border-bottom: 1px solid ${({ theme }) => theme.colors.grey400};
   border-top: 1px solid ${({ theme }) => theme.colors.grey400};
