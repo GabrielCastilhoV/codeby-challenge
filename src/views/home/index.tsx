@@ -23,10 +23,7 @@ export const HomeView = () => {
       </S.ButtonsContainer>
 
       <S.CartContainer>
-        <Cart
-          products={showCartId === 0 ? above.items : below.items}
-          totalizers={showCartId === 0 ? above.totalizers : below.totalizers}
-        />
+        <Cart products={showCartId === 0 ? above.items : below.items} />
       </S.CartContainer>
     </S.Wrapper>
   )

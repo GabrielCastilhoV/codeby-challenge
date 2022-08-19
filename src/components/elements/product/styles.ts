@@ -15,7 +15,15 @@ export const Image = styled.img`
   padding: 0 5px;
   border: 1px solid ${({ theme }) => theme.colors.grey400};
 `
-export const Info = styled.div``
+export const Info = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`
+
+export const Container = styled.div``
 
 export const Name = styled.p`
   font-weight: ${({ theme }) => theme.font.weights.bold};
@@ -32,3 +40,30 @@ export const ListPrice = styled.p`
 `
 
 export const SellingPrice = styled(Name)``
+
+export const AmountContainer = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 10px;
+`
+
+export const Button = styled.button`
+  padding: 5px 10px;
+  border-radius: 999px;
+
+  cursor: pointer;
+  border: none;
+  transition: filter 0.2s;
+  background-color: ${({ theme }) => theme.colors.grey200};
+
+  &:hover:enabled {
+    filter: brightness(0.8);
+  }
+
+  &:disabled {
+    background-color: ${({ theme }) => theme.colors.grey100};
+    cursor: not-allowed;
+  }
+`
+
+export const Amount = styled.span``

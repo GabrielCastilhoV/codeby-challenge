@@ -20,6 +20,7 @@ export default {
     grey400: '#A5A5A5',
     grey300: '#CCD2DF',
     grey200: '#DCDCDC',
+    grey100: '#F2F2F2',
     green400: '#257a00',
     green200: '#c7ffa6'
   }

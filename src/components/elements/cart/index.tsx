@@ -1,27 +1,57 @@
+import { useState, useEffect } from 'react'
+
 import { Button, Product, ProductProps } from 'components/elements'
 
 import { formatPrice } from 'utils'
 
 import * as S from './styles'
 
-type CartProps = {
+export type CartProps = {
   products: ProductProps[]
-  totalizers: {
-    value: number
-  }[]
 }
 
-export const Cart = ({ products, totalizers }: CartProps) => {
-  const valueTotal = totalizers[0]?.value - Math.abs(totalizers[1]?.value)
+export const Cart = ({ products }: CartProps) => {
+  const [allProducts, setAllProducts] = useState<ProductProps[]>([])
+  const [valueTotal, setValueTotal] = useState<number>(0)
+
+  useEffect(() => {
+    setAllProducts(products)
+  }, [products])
+
+  useEffect(() => {
+    const total = allProducts?.reduce((acc, product) => {
+      return acc + product.sellingPrice * product.quantity
+    }, 0)
+
+    setValueTotal(total)
+  }, [allProducts])
+
+  const handleChangeAmount = (id: string, type: 'increment' | 'decrement') => {
+    const updatedCart = [...products]
+
+    const productExists = updatedCart.find(
+      (findProduct) => id === findProduct.uniqueId
+    )
+
+    if (productExists) {
+      type === 'increment' ? productExists.quantity++ : productExists.quantity--
+
+      setAllProducts(updatedCart)
+    }
+  }
 
   return (
     <S.Wrapper>
       <S.Header>Meu Carrinho</S.Header>
 
       <S.Content>
-        {products?.length > 0 &&
-          products.map((product) => (
-            <Product key={product.uniqueId} {...product} />
+        {allProducts?.length > 0 &&
+          allProducts.map((product) => (
+            <Product
+              key={product.uniqueId}
+              handleChangeAmount={handleChangeAmount}
+              {...product}
+            />
           ))}
       </S.Content>
 
