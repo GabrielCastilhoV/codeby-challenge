@@ -42,7 +42,7 @@ describe('<Cart />', () => {
   it('should render the footer', () => {
     render(<Cart products={above.items} totalizers={above.totalizers} />)
     expect(
-      screen.getByRole('button', { name: 'Finalizar Compra' })
+      screen.getByRole('button', { name: 'Finalizar compra' })
     ).toBeInTheDocument()
   })
 })

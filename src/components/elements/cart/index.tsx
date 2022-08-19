@@ -43,7 +43,7 @@ export const Cart = ({ products, totalizers }: CartProps) => {
 
       <S.Footer>
         <Button size="large" active>
-          Finalizar Compra
+          Finalizar compra
         </Button>
       </S.Footer>
     </S.Wrapper>
