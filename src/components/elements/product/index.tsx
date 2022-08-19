@@ -3,6 +3,7 @@ import { formatPrice } from 'utils'
 import * as S from './styles'
 
 export type ProductProps = {
+  uniqueId?: string
   imageUrl: string
   name: string
   listPrice: number

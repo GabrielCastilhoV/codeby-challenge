@@ -19,7 +19,7 @@ describe('<Product />', () => {
     ).toBeInTheDocument()
 
     expect(screen.getByText(/Test product/i)).toBeInTheDocument()
-    expect(screen.getByText(/R\$ 303,00/i)).toBeInTheDocument()
-    expect(screen.getByText(/R\$ 273,00/i)).toBeInTheDocument()
+    expect(screen.getByText(/R\$ 3,03/i)).toBeInTheDocument()
+    expect(screen.getByText(/R\$ 2,73/i)).toBeInTheDocument()
   })
 })

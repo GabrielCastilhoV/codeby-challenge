@@ -8,8 +8,8 @@ export const Wrapper = styled.li`
   list-style: none;
 `
 export const Image = styled.img`
-  width: 130px;
-  height: 130px;
+  width: 110px;
+  height: 110px;
   object-fit: contain;
 
   padding: 0 5px;
