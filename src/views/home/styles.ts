@@ -8,13 +8,21 @@ export const Wrapper = styled.div`
 `
 
 export const ButtonsContainer = styled.div`
-  position: fixed;
-  top: 50%;
-  left: 20%;
-  transform: translateY(-50%);
-
-  display: grid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 16px;
+  margin-bottom: 20px;
+
+  @media screen and (min-width: 1440px) {
+    position: fixed;
+    top: 50%;
+    left: 20%;
+    transform: translateY(-50%);
+
+    flex-direction: column;
+    margin: 0;
+  }
 `
 
 export const CartContainer = styled.div`
