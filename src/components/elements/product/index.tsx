@@ -34,15 +34,19 @@ export const Product = ({
 
         <S.AmountContainer>
           <S.Button
+            aria-label="decrement amount"
             disabled={quantity === 1}
             onClick={() => handleChangeAmount(uniqueId, 'decrement')}
           >
             -
           </S.Button>
 
-          <S.Amount>{quantity}</S.Amount>
+          <S.Amount data-testid="quantity">{quantity}</S.Amount>
 
-          <S.Button onClick={() => handleChangeAmount(uniqueId, 'increment')}>
+          <S.Button
+            aria-label="increment amount"
+            onClick={() => handleChangeAmount(uniqueId, 'increment')}
+          >
             +
           </S.Button>
         </S.AmountContainer>
