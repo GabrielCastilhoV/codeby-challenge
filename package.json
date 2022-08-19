@@ -15,7 +15,6 @@
     "lint": "next lint",
     "test": "jest --maxWorkers=50%",
     "test:watch": "jest --watch --maxWorkers=25%",
-    "test:ci": "jest --runInBand --passWithNoTests",
     "prepare": "husky install"
   },
   "dependencies": {
