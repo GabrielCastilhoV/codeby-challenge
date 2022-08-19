@@ -29,7 +29,9 @@ export const Product = ({
         <S.Container>
           <S.Name>{name}</S.Name>
           <S.ListPrice>{formatPrice(listPrice)}</S.ListPrice>
-          <S.SellingPrice>{formatPrice(sellingPrice)}</S.SellingPrice>
+          <S.SellingPrice>
+            {formatPrice(sellingPrice * quantity)}
+          </S.SellingPrice>
         </S.Container>
 
         <S.AmountContainer>
